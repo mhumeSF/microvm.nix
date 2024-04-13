@@ -124,8 +124,7 @@ in {
         "--watchdog"
         "--console" "null"
         "--serial" "tty"
-        "--kernel" kernelPath
-        "--initramfs" initrdPath
+        "--kernel" "${pkgs.rust-hypervisor-firmware}/bin/hypervisor-fw"
         "--cmdline" "console=ttyS0 reboot=t panic=-1 ${toString microvmConfig.kernelParams}"
         "--seccomp" "true"
         "--memory" memOps
