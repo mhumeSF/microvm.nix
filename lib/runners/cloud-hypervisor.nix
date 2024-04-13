@@ -124,7 +124,7 @@ in {
         "--watchdog"
         "--console" "null"
         "--serial" "tty"
-        "--kernel" "${pkgs.rust-hypervisor-firmware}/bin/hypervisor-fw"
+        "--kernel" "/var/lib/qemu/OVMF.fd"
         "--cmdline" "console=ttyS0 reboot=t panic=-1 ${toString microvmConfig.kernelParams}"
         "--seccomp" "true"
         "--memory" memOps
