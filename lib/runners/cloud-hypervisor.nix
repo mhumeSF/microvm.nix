@@ -124,7 +124,7 @@ in {
         "--watchdog"
         "--console" "null"
         "--serial" "tty"
-        "--kernel" "${pkgs.OVMFFull.fd}/FV/OVMF.fd"
+        "--kernel" "/var/lib/cloud-hypervisor/CLOUDHV.fd"
         "--cmdline" "console=ttyS0 reboot=t panic=-1 ${toString microvmConfig.kernelParams}"
         "--seccomp" "true"
         "--memory" memOps
