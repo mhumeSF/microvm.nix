@@ -160,8 +160,8 @@ in {
       # qemu just hangs after shutdown, allow to exit by rebooting
       "-no-reboot"
 
-      # "-kernel" "${kernelPath}"
-      # "-initrd" initrdPath
+      "-kernel" "${kernelPath}"
+      "-initrd" initrdPath
       "-bios" "${pkgs.OVMFFull.fd}/FV/OVMF.fd"
 
       "-chardev" "stdio,id=stdio,signal=off"
