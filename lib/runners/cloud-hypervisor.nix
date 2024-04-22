@@ -124,7 +124,7 @@ in {
         "--watchdog"
         "--console" "null"
         "--serial" "tty"
-        "--kernel" "/var/lib/qemu/OVMF.fd"
+        "--kernel" "${pkgs.OVMFFull.fd}/FV/OVMF.fd"
         "--cmdline" "console=ttyS0 reboot=t panic=-1 ${toString microvmConfig.kernelParams}"
         "--seccomp" "true"
         "--memory" memOps
